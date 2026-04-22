@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Para Liliane 💜</title>
+
+<style>
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: black;
+    overflow: hidden;
+    color: white;
+}
+
+/* TEXTO */
+.texto {
+    font-style: italic;
+    font-weight: bold;
+    text-align: center;
+    text-shadow: 0 0 10px purple;
+    padding: 20px;
+}
+
+/* ABAS */
+.aba {
+    display: none;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.ativa {
+    display: flex;
+}
+
+/* BOTÕES */
+.botao {
+    background: black;
+    color: white;
+    border: 2px solid purple;
+    padding: 12px 25px;
+    margin: 10px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.botao:hover {
+    background: purple;
+}
+
+/* PARTÍCULAS */
+.particula {
+    position: absolute;
+    width: 5px;
+    height: 5px;
+    background: purple;
+    opacity: 0.6;
+    border-radius: 50%;
+    animation: subir linear infinite;
+}
+
+@keyframes subir {
+    from {
+        transform: translateY(100vh);
+        opacity: 1;
+    }
+    to {
+        transform: translateY(-10vh);
+        opacity: 0;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<!-- PARTÍCULAS -->
+<script>
+for(let i = 0; i < 40; i++){
+    let p = document.createElement("div");
+    p.className = "particula";
+    p.style.left = Math.random() * 100 + "vw";
+    p.style.animationDuration = (3 + Math.random() * 5) + "s";
+    document.body.appendChild(p);
+}
+</script>
+
+<!-- ABA 1 -->
+<div class="aba ativa" id="aba1">
+    <div class="texto">
+        💜Isso vai para minha esposa, a mulher mais linda do mundo!💜<br><br>
+        💜De Weslley para Liliane💜
+    </div>
+    <button class="botao" onclick="irPara(2)">Próximo</button>
+</div>
+
+<!-- ABA 2 -->
+<div class="aba" id="aba2">
+    <div class="texto">
+        💜Amor, desde que te conheci meu coração vem estando mais feliz, mais leve, mais puro...💜<br><br>
+        Você trouxe luz pra minha vida nos momentos mais escuros.<br>
+        Seu sorriso virou meu lugar favorito.<br>
+        Cada conversa com você é um pedacinho de paz.<br>
+        Eu me sinto mais eu mesmo quando estou com você.<br>
+        Você transformou o simples em especial.<br>
+        E eu não consigo mais imaginar minha vida sem você.
+        <br><br>
+        Você aceita casar comigo??
+    </div>
+
+    <button class="botao" onclick="sim()">💜SIM💜</button>
+    <button class="botao">😑NÃO😑</button>
+</div>
+
+<!-- ABA 3 -->
+<div class="aba" id="aba3">
+    <div class="texto">
+        💜Eu amo cada detalhe seu... até quando você tá brava comigo 😅💜<br><br>
+        Você é meu amor, minha paz e meu caos favorito.<br>
+        E sim... você é oficialmente meu chaveirinho 😌<br>
+        Pequena, perfeita e grudada em mim (do jeitinho que eu gosto kkk).<br>
+        Prometo te fazer rir, cuidar de você e estar sempre do seu lado.<br>
+        Porque com você, tudo faz sentido.
+        <br><br>
+        Você aceita casar comigo??
+    </div>
+
+    <button class="botao">💜SIM💜</button>
+    <button class="botao" onclick="nao()">😑NÃO😑</button>
+
+    <div class="texto">Clica no não aí rapidinho😃</div>
+</div>
+
+<!-- ABA 4 -->
+<div class="aba" id="aba4">
+    <div class="texto">
+        💜**EU TE AMO, E VAMOS CASAR VOCÊ QUERENDO OU NÃO KKKK**💜
+    </div>
+</div>
+
+<script>
+function irPara(num){
+    document.querySelectorAll(".aba").forEach(a => a.classList.remove("ativa"));
+    document.getElementById("aba"+num).classList.add("ativa");
+}
+
+function sim(){
+    alert("💜ÓTIMO!💜");
+    irPara(3);
+}
+
+function nao(){
+    alert("VOCÊ NÃO TEM ESCOLHA KKKKKK");
+    irPara(4);
+}
+</script>
+
+</body>
+</html>
