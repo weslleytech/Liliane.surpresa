@@ -1,161 +1,225 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Para Liliane 💜</title>
+<title>Para Meu Amor Liliane</title>
 
 <style>
-body {
-    margin: 0;
-    font-family: Arial, sans-serif;
-    background: black;
-    overflow: hidden;
-    color: white;
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Arial, sans-serif;
 }
 
-/* TEXTO */
-.texto {
-    font-style: italic;
-    font-weight: bold;
-    text-align: center;
-    text-shadow: 0 0 10px purple;
-    padding: 20px;
+body{
+background:#000;
+color:#fff;
+overflow:hidden;
 }
 
-/* ABAS */
-.aba {
-    display: none;
-    height: 100vh;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
+.stars{
+position:fixed;
+width:100%;
+height:100%;
+background-image:
+radial-gradient(#8a2be2 1px, transparent 1px),
+radial-gradient(#8a2be2 1px, transparent 1px);
+background-size:50px 50px;
+background-position:0 0,25px 25px;
+opacity:0.4;
+z-index:-1;
 }
 
-.ativa {
-    display: flex;
+.page{
+display:none;
+height:100vh;
+padding:30px;
+text-align:center;
+justify-content:center;
+align-items:center;
+flex-direction:column;
 }
 
-/* BOTÕES */
-.botao {
-    background: black;
-    color: white;
-    border: 2px solid purple;
-    padding: 12px 25px;
-    margin: 10px;
-    font-weight: bold;
-    cursor: pointer;
-    transition: 0.3s;
+.active{
+display:flex;
 }
 
-.botao:hover {
-    background: purple;
+h1,h2{
+color:#c77dff;
+text-shadow:0 0 10px #a855f7;
+margin-bottom:20px;
 }
 
-/* PARTÍCULAS */
-.particula {
-    position: absolute;
-    width: 5px;
-    height: 5px;
-    background: purple;
-    opacity: 0.6;
-    border-radius: 50%;
-    animation: subir linear infinite;
+p{
+max-width:800px;
+line-height:1.8;
+font-size:18px;
+text-shadow:0 0 8px #7b2cbf;
+margin-bottom:25px;
 }
 
-@keyframes subir {
-    from {
-        transform: translateY(100vh);
-        opacity: 1;
-    }
-    to {
-        transform: translateY(-10vh);
-        opacity: 0;
-    }
+button{
+padding:12px 25px;
+margin:10px;
+border:none;
+border-radius:10px;
+background:#6a0dad;
+color:white;
+font-size:16px;
+cursor:pointer;
+box-shadow:0 0 15px #9d4edd;
+transition:.3s;
+}
+
+button:hover{
+transform:scale(1.05);
+}
+
+img{
+max-width:300px;
+border-radius:15px;
+box-shadow:0 0 20px #9d4edd;
+margin-bottom:20px;
+}
+
+.mensagem{
+margin-top:15px;
+color:#d8b4fe;
+font-weight:bold;
 }
 </style>
 </head>
-
 <body>
 
-<!-- PARTÍCULAS -->
+<div class="stars"></div>
+
+<!-- Página 1 -->
+<div class="page active" id="p1">
+
+<h1>PARA MEU AMOR LILIANE</h1>
+
+<p>
+Amor, mesmo existindo quilômetros entre nós, nunca existiu distância capaz de diminuir o que sinto por você.
+Cada mensagem sua ilumina meu dia, cada ligação faz meu coração acelerar e cada momento ao seu lado,
+mesmo através de uma tela, se transforma em uma lembrança especial.
+
+Você se tornou uma das pessoas mais importantes da minha vida.
+Seu jeito, sua voz, suas risadas e até suas manias fazem parte dos meus pensamentos diariamente.
+Eu amo imaginar o futuro que podemos construir juntos e amo saber que, apesar de tudo, continuamos escolhendo um ao outro.
+
+Obrigado por existir, por me permitir fazer parte da sua vida e por tornar meus dias mais felizes.
+Eu te amo mais do que qualquer texto conseguiria explicar.
+</p>
+
+<p>Deseja ir pra próxima parte?</p>
+
+<button onclick="sim1()">Sim</button>
+<button onclick="nao1()">Não</button>
+
+<div class="mensagem" id="msg1"></div>
+
+</div>
+
+<!-- Página 2 -->
+<div class="page" id="p2">
+
+<h2>Um Pedido de Desculpas ❤️</h2>
+
+<p>
+Amor, eu sei que nem sempre estou acertando.
+Sei que existem atitudes minhas que te machucam, momentos em que eu poderia agir melhor e situações onde minhas mudanças parecem lentas demais.
+
+Eu não quero usar isso como desculpa, apenas quero ser sincero.
+Estou tentando melhorar porque você é importante para mim e porque nosso relacionamento vale esse esforço.
+
+Talvez eu não esteja mudando na velocidade que você gostaria, mas quero que saiba que estou tentando.
+Peço um pouco de paciência comigo enquanto aprendo a ser alguém melhor para nós.
+
+Obrigado por permanecer ao meu lado mesmo nos momentos difíceis.
+Eu reconheço meus erros e quero continuar evoluindo para te fazer feliz.
+</p>
+
+<p>Tem mais uma parte, bora?</p>
+
+<button onclick="sim2()">Sim</button>
+<button onclick="nao2()">Não</button>
+
+<div class="mensagem" id="msg2"></div>
+
+</div>
+
+<!-- Página 3 -->
+<div class="page" id="p3">
+
+<img src="https://files.catbox.moe/i55l1i.jpg">
+
+<p>
+Eu nunca vou esquecer o dia em que te conheci naquele jogo.
+Era apenas mais um dia comum, mais uma partida qualquer...
+mas sem que eu soubesse, aquele momento mudaria minha vida.
+
+Quem imaginaria que uma pessoa encontrada em um jogo se tornaria alguém tão especial?
+Aos poucos fomos conversando, criando confiança, compartilhando histórias e, sem perceber, você foi ocupando um espaço enorme no meu coração.
+
+Hoje, quando lembro daquele dia, penso em como tive sorte.
+Entre tantas pessoas, fui justamente encontrar você.
+</p>
+
+<button onclick="abrir4()">Prosseguir</button>
+
+</div>
+
+<!-- Página 4 -->
+<div class="page" id="p4">
+
+<img src="https://files.catbox.moe/kwvlz9.png">
+
+<p>
+Quando vejo essa imagem, penso em nós.
+
+Penso em um futuro onde possamos acordar juntos, compartilhar os dias, construir uma família e viver momentos simples que se tornariam especiais apenas por estarmos lado a lado.
+
+Eu sonho com um casal feliz, cheio de amor, companheirismo e respeito.
+E confesso que também imagino nossos filhos herdando esse seu jeitinho lindo que me fez me apaixonar por você.
+
+Não sei exatamente como será o futuro, mas sei que gostaria muito de construir ele ao seu lado.
+Porque quando penso em felicidade, você sempre faz parte dela.
+
+Eu te amo, Liliane. ❤️
+</p>
+
+</div>
+
 <script>
-for(let i = 0; i < 40; i++){
-    let p = document.createElement("div");
-    p.className = "particula";
-    p.style.left = Math.random() * 100 + "vw";
-    p.style.animationDuration = (3 + Math.random() * 5) + "s";
-    document.body.appendChild(p);
-}
-</script>
-
-<!-- ABA 1 -->
-<div class="aba ativa" id="aba1">
-    <div class="texto">
-        💜Isso vai para minha esposa, a mulher mais linda do mundo!💜<br><br>
-        💜De Weslley para Liliane💜
-    </div>
-    <button class="botao" onclick="irPara(2)">Próximo</button>
-</div>
-
-<!-- ABA 2 -->
-<div class="aba" id="aba2">
-    <div class="texto">
-        💜Amor, desde que te conheci meu coração vem estando mais feliz, mais leve, mais puro...💜<br><br>
-        Você trouxe luz pra minha vida nos momentos mais escuros.<br>
-        Seu sorriso virou meu lugar favorito.<br>
-        Cada conversa com você é um pedacinho de paz.<br>
-        Eu me sinto mais eu mesmo quando estou com você.<br>
-        Você transformou o simples em especial.<br>
-        E eu não consigo mais imaginar minha vida sem você.
-        <br><br>
-        Você aceita casar comigo??
-    </div>
-
-    <button class="botao" onclick="sim()">💜SIM💜</button>
-    <button class="botao">😑NÃO😑</button>
-</div>
-
-<!-- ABA 3 -->
-<div class="aba" id="aba3">
-    <div class="texto">
-        💜Eu amo cada detalhe seu... até quando você tá brava comigo 😅💜<br><br>
-        Você é meu amor, minha paz e meu caos favorito.<br>
-        E sim... você é oficialmente meu chaveirinho 😌<br>
-        Pequena, perfeita e grudada em mim (do jeitinho que eu gosto kkk).<br>
-        Prometo te fazer rir, cuidar de você e estar sempre do seu lado.<br>
-        Porque com você, tudo faz sentido.
-        <br><br>
-        Você aceita casar comigo??
-    </div>
-
-    <button class="botao">💜SIM💜</button>
-    <button class="botao" onclick="nao()">😑NÃO😑</button>
-
-    <div class="texto">Clica no não aí rapidinho😃</div>
-</div>
-
-<!-- ABA 4 -->
-<div class="aba" id="aba4">
-    <div class="texto">
-        💜**EU TE AMO, E VAMOS CASAR VOCÊ QUERENDO OU NÃO KKKK**💜
-    </div>
-</div>
-
-<script>
-function irPara(num){
-    document.querySelectorAll(".aba").forEach(a => a.classList.remove("ativa"));
-    document.getElementById("aba"+num).classList.add("ativa");
+function sim1(){
+document.getElementById("msg1").innerText="ué, resolveu? Kkkk";
 }
 
-function sim(){
-    alert("💜ÓTIMO!💜");
-    irPara(3);
+function nao1(){
+document.getElementById("msg1").innerText="te peguei né, hoje seu 'não' não funciona kkkk";
+setTimeout(()=>{
+document.getElementById("p1").classList.remove("active");
+document.getElementById("p2").classList.add("active");
+},1500);
 }
 
-function nao(){
-    alert("VOCÊ NÃO TEM ESCOLHA KKKKKK");
-    irPara(4);
+function sim2(){
+document.getElementById("msg2").innerText="hmm kkkk";
+}
+
+function nao2(){
+document.getElementById("msg2").innerText="pq vc ainda nega?-_-";
+setTimeout(()=>{
+document.getElementById("p2").classList.remove("active");
+document.getElementById("p3").classList.add("active");
+},1500);
+}
+
+function abrir4(){
+document.getElementById("p3").classList.remove("active");
+document.getElementById("p4").classList.add("active");
 }
 </script>
 
