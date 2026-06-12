@@ -3,224 +3,268 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Para Meu Amor Liliane</title>
+<title>Dia dos Namorados ❤️</title>
 
 <style>
+
 *{
 margin:0;
 padding:0;
 box-sizing:border-box;
-font-family:Arial, sans-serif;
+font-family:'Segoe UI',sans-serif;
 }
 
 body{
-background:#000;
-color:#fff;
+background:#080808;
+color:white;
 overflow:hidden;
 }
 
-.stars{
+canvas{
 position:fixed;
-width:100%;
-height:100%;
-background-image:
-radial-gradient(#8a2be2 1px, transparent 1px),
-radial-gradient(#8a2be2 1px, transparent 1px);
-background-size:50px 50px;
-background-position:0 0,25px 25px;
-opacity:0.4;
+top:0;
+left:0;
 z-index:-1;
 }
 
-.page{
+.pagina{
 display:none;
 height:100vh;
-padding:30px;
-text-align:center;
+width:100%;
 justify-content:center;
 align-items:center;
 flex-direction:column;
+text-align:center;
+padding:25px;
 }
 
-.active{
+.ativa{
 display:flex;
 }
 
-h1,h2{
-color:#c77dff;
-text-shadow:0 0 10px #a855f7;
+h1{
+font-size:3rem;
 margin-bottom:20px;
+color:#ff7eb6;
+text-shadow:0 0 15px #ff4fa3;
+}
+
+h2{
+margin-bottom:20px;
+color:#ff9cc9;
+text-shadow:0 0 10px #ff4fa3;
 }
 
 p{
-max-width:800px;
+max-width:700px;
 line-height:1.8;
-font-size:18px;
-text-shadow:0 0 8px #7b2cbf;
+font-size:1.1rem;
 margin-bottom:25px;
 }
 
 button{
 padding:12px 25px;
-margin:10px;
 border:none;
-border-radius:10px;
-background:#6a0dad;
+border-radius:30px;
+background:#ff4fa3;
 color:white;
-font-size:16px;
+font-size:1rem;
 cursor:pointer;
-box-shadow:0 0 15px #9d4edd;
 transition:.3s;
+margin:5px;
+box-shadow:0 0 20px rgba(255,79,163,.6);
 }
 
 button:hover{
-transform:scale(1.05);
+transform:scale(1.08);
 }
 
-img{
-max-width:300px;
-border-radius:15px;
-box-shadow:0 0 20px #9d4edd;
-margin-bottom:20px;
+.caixa{
+background:rgba(255,255,255,.05);
+backdrop-filter:blur(8px);
+padding:30px;
+border-radius:25px;
+border:1px solid rgba(255,255,255,.1);
+max-width:800px;
 }
 
-.mensagem{
-margin-top:15px;
-color:#d8b4fe;
-font-weight:bold;
+.contador{
+font-size:1.3rem;
+margin:15px 0;
+color:#ff9cc9;
 }
+
+.coracao{
+font-size:4rem;
+animation:pulsar 1.5s infinite;
+}
+
+@keyframes pulsar{
+50%{transform:scale(1.2);}
+}
+
 </style>
 </head>
 <body>
 
-<div class="stars"></div>
+<canvas id="canvas"></canvas>
 
-<!-- Página 1 -->
-<div class="page active" id="p1">
+<div class="pagina ativa" id="p1">
+<div class="caixa">
+<div class="coracao">❤️</div>
 
-<h1>PARA MEU AMOR LILIANE</h1>
+<h1>Feliz Dia dos Namorados</h1>
 
 <p>
-Amor, mesmo existindo quilômetros entre nós, nunca existiu distância capaz de diminuir o que sinto por você.
-Cada mensagem sua ilumina meu dia, cada ligação faz meu coração acelerar e cada momento ao seu lado,
-mesmo através de uma tela, se transforma em uma lembrança especial.
-
-Você se tornou uma das pessoas mais importantes da minha vida.
-Seu jeito, sua voz, suas risadas e até suas manias fazem parte dos meus pensamentos diariamente.
-Eu amo imaginar o futuro que podemos construir juntos e amo saber que, apesar de tudo, continuamos escolhendo um ao outro.
-
-Obrigado por existir, por me permitir fazer parte da sua vida e por tornar meus dias mais felizes.
-Eu te amo mais do que qualquer texto conseguiria explicar.
+O amor não é sobre perfeição.
+É sobre escolher a mesma pessoa inúmeras vezes,
+mesmo quando os dias não são fáceis.
+É sobre construir memórias, rir de coisas bobas
+e encontrar felicidade na companhia de alguém especial.
 </p>
 
-<p>Deseja ir pra próxima parte?</p>
-
-<button onclick="sim1()">Sim</button>
-<button onclick="nao1()">Não</button>
-
-<div class="mensagem" id="msg1"></div>
-
+<button onclick="abrir(2)">
+Abrir uma surpresa ✨
+</button>
+</div>
 </div>
 
-<!-- Página 2 -->
-<div class="page" id="p2">
+<div class="pagina" id="p2">
+<div class="caixa">
 
-<h2>Um Pedido de Desculpas ❤️</h2>
+<h2>Quanto vale o amor?</h2>
 
 <p>
-Amor, eu sei que nem sempre estou acertando.
-Sei que existem atitudes minhas que te machucam, momentos em que eu poderia agir melhor e situações onde minhas mudanças parecem lentas demais.
-
-Eu não quero usar isso como desculpa, apenas quero ser sincero.
-Estou tentando melhorar porque você é importante para mim e porque nosso relacionamento vale esse esforço.
-
-Talvez eu não esteja mudando na velocidade que você gostaria, mas quero que saiba que estou tentando.
-Peço um pouco de paciência comigo enquanto aprendo a ser alguém melhor para nós.
-
-Obrigado por permanecer ao meu lado mesmo nos momentos difíceis.
-Eu reconheço meus erros e quero continuar evoluindo para te fazer feliz.
+Alguns diriam que não tem preço.
+Outros diriam que vale uma vida inteira.
+Mas talvez o amor seja apenas a soma de pequenos momentos:
+um bom dia, uma mensagem inesperada,
+uma conversa de madrugada ou um abraço depois de um dia difícil.
 </p>
 
-<p>Tem mais uma parte, bora?</p>
-
-<button onclick="sim2()">Sim</button>
-<button onclick="nao2()">Não</button>
-
-<div class="mensagem" id="msg2"></div>
-
+<div class="contador" id="amor">
+0%
 </div>
 
-<!-- Página 3 -->
-<div class="page" id="p3">
-
-<img src="https://files.catbox.moe/i55l1i.jpg">
-
-<p>
-Eu nunca vou esquecer o dia em que te conheci naquele jogo.
-Era apenas mais um dia comum, mais uma partida qualquer...
-mas sem que eu soubesse, aquele momento mudaria minha vida.
-
-Quem imaginaria que uma pessoa encontrada em um jogo se tornaria alguém tão especial?
-Aos poucos fomos conversando, criando confiança, compartilhando histórias e, sem perceber, você foi ocupando um espaço enorme no meu coração.
-
-Hoje, quando lembro daquele dia, penso em como tive sorte.
-Entre tantas pessoas, fui justamente encontrar você.
-</p>
-
-<button onclick="abrir4()">Prosseguir</button>
+<button onclick="encherAmor()">
+Medir o Amor ❤️
+</button>
 
 </div>
+</div>
 
-<!-- Página 4 -->
-<div class="page" id="p4">
+<div class="pagina" id="p3">
+<div class="caixa">
 
-<img src="https://files.catbox.moe/kwvlz9.png">
+<h1>Resultado Final</h1>
+
+<div class="coracao">💞</div>
 
 <p>
-Quando vejo essa imagem, penso em nós.
+Análise concluída...
 
-Penso em um futuro onde possamos acordar juntos, compartilhar os dias, construir uma família e viver momentos simples que se tornariam especiais apenas por estarmos lado a lado.
+O amor encontrado foi superior ao limite permitido.
 
-Eu sonho com um casal feliz, cheio de amor, companheirismo e respeito.
-E confesso que também imagino nossos filhos herdando esse seu jeitinho lindo que me fez me apaixonar por você.
+Consequência:
+Mais sorrisos.
+Mais carinho.
+Mais memórias.
+Mais momentos especiais.
 
-Não sei exatamente como será o futuro, mas sei que gostaria muito de construir ele ao seu lado.
-Porque quando penso em felicidade, você sempre faz parte dela.
-
-Eu te amo, Liliane. ❤️
+Prescrição obrigatória:
+Continuar amando sem moderação.
 </p>
 
+<h2>❤️ Feliz Dia dos Namorados ❤️</h2>
+
+<button onclick="reiniciar()">
+Começar novamente
+</button>
+
+</div>
 </div>
 
 <script>
-function sim1(){
-document.getElementById("msg1").innerText="ué, resolveu? Kkkk";
+
+function abrir(num){
+document.querySelector(".ativa").classList.remove("ativa");
+document.getElementById("p"+num).classList.add("ativa");
 }
 
-function nao1(){
-document.getElementById("msg1").innerText="te peguei né, hoje seu 'não' não funciona kkkk";
+function encherAmor(){
+
+let valor=0;
+
+let intervalo=setInterval(()=>{
+
+valor+=2;
+
+document.getElementById("amor").innerHTML=
+valor+"%";
+
+if(valor>=100){
+
+clearInterval(intervalo);
+
 setTimeout(()=>{
-document.getElementById("p1").classList.remove("active");
-document.getElementById("p2").classList.add("active");
-},1500);
+abrir(3);
+},800);
+
 }
 
-function sim2(){
-document.getElementById("msg2").innerText="hmm kkkk";
+},50);
+
 }
 
-function nao2(){
-document.getElementById("msg2").innerText="pq vc ainda nega?-_-";
-setTimeout(()=>{
-document.getElementById("p2").classList.remove("active");
-document.getElementById("p3").classList.add("active");
-},1500);
+function reiniciar(){
+location.reload();
 }
 
-function abrir4(){
-document.getElementById("p3").classList.remove("active");
-document.getElementById("p4").classList.add("active");
+/* PARTICULAS */
+
+const canvas=document.getElementById("canvas");
+const ctx=canvas.getContext("2d");
+
+canvas.width=window.innerWidth;
+canvas.height=window.innerHeight;
+
+let hearts=[];
+
+for(let i=0;i<60;i++){
+hearts.push({
+x:Math.random()*canvas.width,
+y:Math.random()*canvas.height,
+s:Math.random()*4+2,
+v:Math.random()*1+0.3
+});
 }
+
+function animar(){
+
+ctx.clearRect(0,0,canvas.width,canvas.height);
+
+ctx.fillStyle="#ff4fa3";
+
+hearts.forEach(h=>{
+
+ctx.font=h.s*5+"px Arial";
+ctx.fillText("❤",h.x,h.y);
+
+h.y-=h.v;
+
+if(h.y<0){
+h.y=canvas.height+20;
+h.x=Math.random()*canvas.width;
+}
+
+});
+
+requestAnimationFrame(animar);
+
+}
+
+animar();
+
 </script>
 
 </body>
